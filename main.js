@@ -62,8 +62,8 @@ function loadGrain(levels) {
   }
   return freeSpaces + ' free spaces';
 }
-
-console.log(loadGrain([4, 1, 3])); //2
+console.log(loadGrain([10,45,44,41,35,28,12,35,8,40])); //82
+// console.log(loadGrain([4, 1, 3])); //2
 // console.log(loadGrain([2, 1, 5, 2, 7, 4, 10])); //7
 // console.log(loadGrain([2, 0, 1, 5, 2, 7])); //6
 // console.log(loadGrain([2, 4, 2])); //0
