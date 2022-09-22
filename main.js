@@ -12,7 +12,6 @@ function loadGrain(levels) {
   let indexOfLower = [];
   let start = 0;
   let end = 0;
-  let sumOfGap = 0;
   for (; ;) {
 
     levels.filter(function (arr, index) {
@@ -39,12 +38,11 @@ function loadGrain(levels) {
     }
 
     for (let j = start + 1; j < end; j++) {
-      sumOfGap += levels[j];
       sortedLevels.splice(sortedLevels.indexOf(levels[j]), 1)
       if (Math.max(...indexOfHighest) >= Math.max(...indexOfLower)) {
-        if (levels[j] < levels[j - 1]) {
-          freeSpaces += levels[j - 1] - levels[j];
-          levels[j] = levels[j - 1];
+        if (levels[j] < levels[start]) {
+          freeSpaces += levels[start] - levels[j];
+          levels[j] = levels[start];
         }
       } else {
         if (levels[j] < levels[end]) {
@@ -54,8 +52,7 @@ function loadGrain(levels) {
       }
     }
 
-    sortedLevels.shift()
-    sumOfGap = 0;
+    sortedLevels.shift();
     indexOfHighest = [];
     indexOfLower = [];
 
