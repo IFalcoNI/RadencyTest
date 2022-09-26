@@ -54,12 +54,6 @@ function loadGrain(levels) {
         }
       }
     }
-    console.log(start + "start");
-    console.log(end + "end");
-    console.log(levels[start]);
-    console.log(levels[end]);
-    console.log(levels);
-    console.log(sortedLevels);
     sortedLevels.shift();
     indexOfHighest = [];
     indexOfLower = [];
