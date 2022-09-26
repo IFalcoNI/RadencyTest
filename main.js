@@ -39,9 +39,7 @@ function loadGrain(levels) {
       } else {
         start = indexOfHighest[0];
       }
-
     }
-
     for (let j = start + 1; j < end; j++) {
       sortedLevels.splice(sortedLevels.indexOf(levels[j]), 1)
       if (indexOfHighest[indexOfHighest.length - 1] >= indexOfLower[indexOfLower.length - 1]) {
@@ -56,12 +54,12 @@ function loadGrain(levels) {
         }
       }
     }
-    // console.log(start + "start");
-    // console.log(end + "end");
-    // console.log(levels[start]);
-    // console.log(levels[end]);
-    // console.log(levels);
-    // console.log(sortedLevels);
+    console.log(start + "start");
+    console.log(end + "end");
+    console.log(levels[start]);
+    console.log(levels[end]);
+    console.log(levels);
+    console.log(sortedLevels);
     sortedLevels.shift();
     indexOfHighest = [];
     indexOfLower = [];
